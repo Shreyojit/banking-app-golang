@@ -3,14 +3,14 @@ CREATE TABLE "accounts" (
   "balance" bigint NOT NULL,
   "onwer" varchar NOT NULL,
   "currency" varchar NOT NULL,
-  "create_at" timestampz NOT NULL DEFAULT (now())
+  "create_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "entries" (
   "id" bigserial PRIMARY KEY,
   "account_id" bigint,
   "amount" bigint NOT NULL,
-  "create_at" timestampz NOT NULL DEFAULT (now())
+  "create_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "transfers" (
